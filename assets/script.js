@@ -38,14 +38,7 @@
     })
   });
 
-  // pointer trail
-  const pointer = document.createElement('div');
-  pointer.className='pointer';
-  document.body.appendChild(pointer);
-  window.addEventListener('mousemove', (e)=>{
-    pointer.style.left = e.clientX+'px';
-    pointer.style.top = e.clientY+'px';
-  });
+  // pointer trail removed: use native cursor only
 
   // contact form handling (client-only, replace action with Formspree/Netlify endpoint in README)
   const form = document.getElementById('contactForm');
