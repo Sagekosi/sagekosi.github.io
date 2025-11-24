@@ -46,22 +46,36 @@
 
       <div class="repo-grid">
         <section class="repo-main">
-          <div class="file-list card">
-            <div class="file-list-header">Files</div>
-            <table class="files" role="table">
-              <tbody>
-                <tr><td class="file">index.html</td><td class="file-meta">1 KB</td></tr>
-                <tr><td class="file">about.html</td><td class="file-meta">1 KB</td></tr>
-                <tr><td class="file">projects.html</td><td class="file-meta">1 KB</td></tr>
-                <tr><td class="file">contact.html</td><td class="file-meta">1 KB</td></tr>
-                <tr><td class="file">api/hello.json</td><td class="file-meta">0.2 KB</td></tr>
-              </tbody>
-            </table>
+          <div class="card project-grid">
+            <div class="file-list-header">Featured</div>
+            <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.9rem;margin-top:0.6rem">
+              <a class="project-tile" href="#">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Project thumbnail">
+                <div class="project-body">
+                  <div class="project-title">gunslol-open-source</div>
+                  <div class="project-desc">A demo project showcasing a guns.lol-inspired layout and design.</div>
+                </div>
+              </a>
+              <a class="project-tile" href="#">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Project thumbnail">
+                <div class="project-body">
+                  <div class="project-title">Static Site</div>
+                  <div class="project-desc">Fast static pages, deployed with GitHub Pages.</div>
+                </div>
+              </a>
+              <a class="project-tile" href="#">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Project thumbnail">
+                <div class="project-body">
+                  <div class="project-title">API Example</div>
+                  <div class="project-desc">Static JSON endpoint for demos.</div>
+                </div>
+              </a>
+            </div>
           </div>
 
           <article class="card readme">
             <h2>README</h2>
-            <p>This project is a static site scaffold. The layout here is inspired by repository pages. Replace this content with your own README or project documentation.</p>
+            <p>This project is a static site scaffold inspired by the visual style of guns.lol — bold hero, project tiles, and strong hover/glow accents. Replace this content with your own README or project documentation.</p>
             <h3>Getting started</h3>
             <pre><code>python3 -m http.server 8000</code></pre>
             <p>Open <code>http://localhost:8000</code> to preview locally.</p>
@@ -75,11 +89,11 @@
           </div>
 
           <div class="card">
-            <h4>Languages</h4>
+            <h4>Quick links</h4>
             <ul class="lang-list">
-              <li>HTML <span class="lang-percent">70%</span></li>
-              <li>CSS <span class="lang-percent">25%</span></li>
-              <li>JavaScript <span class="lang-percent">5%</span></li>
+              <li><a href="/projects.html">Projects</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
             </ul>
           </div>
         </aside>
