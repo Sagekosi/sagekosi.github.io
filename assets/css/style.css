@@ -112,4 +112,26 @@ code{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px}
 /* stronger glow accent on hover */
 .project-tile:hover{box-shadow:0 20px 60px rgba(124,192,255,0.08), 0 6px 20px rgba(255,118,117,0.03)}
 
+/* Filters */
+.filters{display:flex;gap:0.5rem}
+.filter{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.03);padding:0.4rem 0.6rem;border-radius:6px;cursor:pointer}
+.filter.active{background:linear-gradient(90deg,var(--accent),#5bb6ff);color:#001827;border-color:transparent}
+
+/* chips */
+.chip{background:rgba(255,255,255,0.02);padding:0.4rem 0.6rem;border-radius:999px;color:var(--muted);font-weight:600}
+
+/* Modal */
+#case-modal .modal-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none}
+#case-modal .modal-overlay.open{opacity:1;pointer-events:auto}
+#case-modal .modal-content{position:relative;max-width:820px;width:94%;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:1rem;box-shadow:0 20px 60px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04)}
+#case-modal .modal-close{position:absolute;right:12px;top:12px;background:transparent;border:0;color:var(--text);font-size:1.05rem}
+#case-modal .modal-body{padding-top:0.25rem}
+#case-modal .modal-title{margin:0 0 0.25rem;font-size:1.25rem}
+#case-modal .modal-meta{color:var(--muted);margin:0 0 0.5rem}
+
+@media (max-width:760px){
+  .project-thumb{height:120px}
+}
+
+
 

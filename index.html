@@ -46,6 +46,155 @@
 
       <div class="repo-grid">
         <section class="repo-main">
+          <!-- HERO -->
+          <section id="hero" class="card hero">
+            <h1>Hi, I'm Sagekosi — I design and build web products</h1>
+            <p class="lead">Past, present and future projects that solve real problems. I focus on frontend engineering, performance and delightful UX.</p>
+            <p>
+              <a class="btn" href="#work">View Work</a>
+              <a class="btn" href="/contact.html" style="margin-left:0.6rem;background:transparent;color:var(--accent);border:1px solid rgba(124,192,255,0.12);">Contact</a>
+            </p>
+          </section>
+
+          <!-- ABOUT -->
+          <section id="about" class="card" style="margin-top:1rem">
+            <h2>About</h2>
+            <p>I build thoughtful, accessible web interfaces with a focus on performance and clarity. Available for freelance or full-time roles. This single-page portfolio groups my work into Past, Present and Future items so visitors can quickly get context.</p>
+          </section>
+
+          <!-- WORK / PROJECTS -->
+          <section id="work" class="card" style="margin-top:1rem">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+              <div>
+                <h2 style="margin:0">Work</h2>
+                <p class="lead" style="margin:0.25rem 0 0">Filter projects by Past / Present / Future</p>
+              </div>
+              <div class="filters" role="tablist" aria-label="Project filters">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="past">Past</button>
+                <button class="filter" data-filter="present">Present</button>
+                <button class="filter" data-filter="future">Future</button>
+              </div>
+            </div>
+
+            <div class="grid project-grid" style="margin-top:1rem">
+              <!-- Sample projects: data-type values = past|present|future -->
+              <article class="project-tile" data-type="past" tabindex="0"
+                data-title="Project Atlas"
+                data-role="Lead Frontend"
+                data-year="2022"
+                data-desc="A responsive data dashboard that reduced load times by 40% and improved user engagement."
+                data-images="/assets/img/avatar.svg">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Project Atlas thumbnail">
+                <div class="project-body">
+                  <div class="project-title">Project Atlas</div>
+                  <div class="project-desc">Data dashboard • Lead Frontend • 2022</div>
+                  <div style="margin-top:0.5rem"><button class="case-btn">View case study</button></div>
+                </div>
+              </article>
+
+              <article class="project-tile" data-type="present" tabindex="0"
+                data-title="GunsLOL UI"
+                data-role="Frontend Engineer"
+                data-year="2024"
+                data-desc="Designing and shipping a performant UI for a realtime community project."
+                data-images="/assets/img/avatar.svg">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="GunsLOL UI thumbnail">
+                <div class="project-body">
+                  <div class="project-title">GunsLOL UI</div>
+                  <div class="project-desc">Realtime community UI • 2024</div>
+                  <div style="margin-top:0.5rem"><button class="case-btn">View case study</button></div>
+                </div>
+              </article>
+
+              <article class="project-tile" data-type="future" tabindex="0"
+                data-title="Future Initiative X"
+                data-role="Product Designer / Engineer"
+                data-year="Planned"
+                data-desc="An experimental project exploring immersive interfaces and AR overlays for web." 
+                data-images="/assets/img/avatar.svg">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Future Initiative X thumbnail">
+                <div class="project-body">
+                  <div class="project-title">Future Initiative X</div>
+                  <div class="project-desc">Exploratory • AR / Immersive</div>
+                  <div style="margin-top:0.5rem"><button class="case-btn">View case study</button></div>
+                </div>
+              </article>
+
+              <article class="project-tile" data-type="past" tabindex="0"
+                data-title="Landing Revamp"
+                data-role="Frontend" data-year="2021"
+                data-desc="Redesigned a marketing landing page, increasing conversion by 18%" data-images="/assets/img/avatar.svg">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Landing Revamp thumbnail">
+                <div class="project-body">
+                  <div class="project-title">Landing Revamp</div>
+                  <div class="project-desc">Marketing • 2021</div>
+                  <div style="margin-top:0.5rem"><button class="case-btn">View case study</button></div>
+                </div>
+              </article>
+
+              <article class="project-tile" data-type="present" tabindex="0"
+                data-title="Open Source Toolkit"
+                data-role="Maintainer" data-year="2023"
+                data-desc="Maintaining an open-source toolkit used by community projects." data-images="/assets/img/avatar.svg">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="Toolkit thumbnail">
+                <div class="project-body">
+                  <div class="project-title">Open Source Toolkit</div>
+                  <div class="project-desc">Open-source • 2023</div>
+                  <div style="margin-top:0.5rem"><button class="case-btn">View case study</button></div>
+                </div>
+              </article>
+
+              <article class="project-tile" data-type="future" tabindex="0"
+                data-title="AI Assistant" data-role="Product Lead" data-year="Planned"
+                data-desc="A future project to integrate contextual AI helpers into workflows." data-images="/assets/img/avatar.svg">
+                <img class="project-thumb" src="/assets/img/avatar.svg" alt="AI Assistant thumbnail">
+                <div class="project-body">
+                  <div class="project-title">AI Assistant</div>
+                  <div class="project-desc">Planned • AI</div>
+                  <div style="margin-top:0.5rem"><button class="case-btn">View case study</button></div>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- TIMELINE / ROADMAP -->
+          <section id="timeline" class="card" style="margin-top:1rem">
+            <h2>Roadmap</h2>
+            <p class="lead">Selected upcoming initiatives and experiments I'm planning to explore.</p>
+            <ul>
+              <li><strong>Q1:</strong> AI assistant prototype</li>
+              <li><strong>Q2:</strong> Performance-first UI components library</li>
+            </ul>
+          </section>
+
+          <!-- SKILLS -->
+          <section id="skills" class="card" style="margin-top:1rem">
+            <h2>Skills</h2>
+            <p class="lead">Frontend, design systems, performance optimization, accessibility.</p>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Accessibility</span>
+              <span class="chip">Performance</span>
+            </div>
+          </section>
+
+          <!-- TESTIMONIALS -->
+          <section id="testimonials" class="card" style="margin-top:1rem">
+            <h2>Testimonials</h2>
+            <blockquote class="lead">“Delivered great results quickly and with excellent communication.” — Former client</blockquote>
+          </section>
+
+          <!-- CONTACT -->
+          <section id="contact" class="card" style="margin-top:1rem">
+            <h2>Contact</h2>
+            <p class="lead">I'm open to opportunities and collaborations. Reach out via email or LinkedIn.</p>
+            <p><a href="mailto:you@example.com">you@example.com</a></p>
+          </section>
           <div class="card project-grid">
             <div class="file-list-header">Featured</div>
             <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.9rem;margin-top:0.6rem">
