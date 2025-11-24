@@ -32,6 +32,28 @@
           <a class="btn" href="/contact.html">Contact</a>
         </p>
       </section>
+      
+      <!-- In-page contact block -->
+      <section id="contact" class="card" style="margin-top:1rem">
+        <h2>Contact</h2>
+        <p class="lead">Want to work together or ask a question? Send me a message and I’ll get back to you.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="6" placeholder="Brief message" required></textarea>
+
+          <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.5rem">
+            <button type="submit" class="btn">Send email</button>
+            <div id="cf-status" aria-live="polite" style="color:var(--muted)"></div>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer">

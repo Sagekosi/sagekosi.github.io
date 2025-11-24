@@ -75,3 +75,28 @@ document.addEventListener('DOMContentLoaded', function(){
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
 
 });
+
+// Contact form: open user's mail client with prefilled subject/body
+document.addEventListener('DOMContentLoaded', function(){
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('cf-status');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('cf-name').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var msg = document.getElementById('cf-message').value.trim();
+    if(!name || !email || !msg){
+      if(status) status.textContent = 'Please fill all fields.';
+      return;
+    }
+    // Prepare mailto
+    var to = 'you@example.com';
+    var subject = encodeURIComponent('Website message from ' + name);
+    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + msg);
+    var mailto = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+    // Open mail client
+    window.location.href = mailto;
+    if(status) status.textContent = 'Opening your mail client...';
+  });
+});
