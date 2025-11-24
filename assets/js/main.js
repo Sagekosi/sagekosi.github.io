@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function(){
       return;
     }
     // Prepare mailto
-    var to = 'you@example.com';
+    var to = 'venerablekosi@gmail.com';
     var subject = encodeURIComponent('Website message from ' + name);
     var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + msg);
     var mailto = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
