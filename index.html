@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sagekosi</title>
+    <meta name="description" content="Sagekosi — personal site" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">Sagekosi</a>
+        <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container repo-layout">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a class="owner" href="#">JAQLIV</a>
+          <span class="slash">/</span>
+          <strong class="repo-name">gunslol-open-source</strong>
+          <span class="repo-badge">Public</span>
+        </div>
+        <p class="repo-desc">A demo project layout inspired by open source repos — replace with your repository description.</p>
+      </div>
+
+      <div class="repo-tabs" role="navigation" aria-label="Repository">
+        <nav class="tabs">
+          <a class="tab active" href="#">Code</a>
+          <a class="tab" href="#">Issues</a>
+          <a class="tab" href="#">Pull requests</a>
+          <a class="tab" href="#">Actions</a>
+          <a class="tab" href="#">Projects</a>
+        </nav>
+      </div>
+
+      <div class="repo-grid">
+        <section class="repo-main">
+          <div class="file-list card">
+            <div class="file-list-header">Files</div>
+            <table class="files" role="table">
+              <tbody>
+                <tr><td class="file">index.html</td><td class="file-meta">1 KB</td></tr>
+                <tr><td class="file">about.html</td><td class="file-meta">1 KB</td></tr>
+                <tr><td class="file">projects.html</td><td class="file-meta">1 KB</td></tr>
+                <tr><td class="file">contact.html</td><td class="file-meta">1 KB</td></tr>
+                <tr><td class="file">api/hello.json</td><td class="file-meta">0.2 KB</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <article class="card readme">
+            <h2>README</h2>
+            <p>This project is a static site scaffold. The layout here is inspired by repository pages. Replace this content with your own README or project documentation.</p>
+            <h3>Getting started</h3>
+            <pre><code>python3 -m http.server 8000</code></pre>
+            <p>Open <code>http://localhost:8000</code> to preview locally.</p>
+          </article>
+        </section>
+
+        <aside class="repo-side">
+          <div class="card">
+            <h4>About</h4>
+            <p>A small static site converted from a Next.js project. Use this area for a short repo summary, topics, and links.</p>
+          </div>
+
+          <div class="card">
+            <h4>Languages</h4>
+            <ul class="lang-list">
+              <li>HTML <span class="lang-percent">70%</span></li>
+              <li>CSS <span class="lang-percent">25%</span></li>
+              <li>JavaScript <span class="lang-percent">5%</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Sagekosi. Built with HTML &amp; a tiny bit of JS.</p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+:root{
+  --bg:#071025;
+  --bg-2:#081426;
+  --text:#e6eef8;
+  --muted:#9aa8bd;
+  --accent:#7cc0ff;
+  --card:rgba(255,255,255,0.03);
+  --border:rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text);background:var(--bg);line-height:1.5;min-height:100vh;position:relative;overflow-x:hidden}
+
+/* Glow background layers */
+body::before,
+body::after{
+  content:"";
+  position:fixed;left:50%;top:0;transform:translateX(-50%);
+  width:1400px;height:700px;border-radius:50%;filter:blur(100px);opacity:0.6;pointer-events:none;z-index:-1;
+}
+body::before{
+  background:radial-gradient(closest-side at 20% 20%, rgba(124,192,255,0.18), transparent 30%), radial-gradient(closest-side at 80% 40%, rgba(124,255,182,0.08), transparent 35%);
+  top:-200px;left:20%;transform:none;width:900px;height:600px;opacity:0.55;
+}
+body::after{
+  background:radial-gradient(closest-side at 80% 80%, rgba(255,118,117,0.12), transparent 30%), radial-gradient(closest-side at 30% 70%, rgba(144,124,255,0.06), transparent 35%);
+  bottom:-200px;top:auto;left:auto;right:10%;transform:none;width:1000px;height:600px;opacity:0.45;
+}
+
+.container{max-width:980px;margin:0 auto;padding:1.5rem}
+.site-header{border-bottom:1px solid var(--border);backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.site-header .container{display:flex;align-items:center;gap:1rem}
+.brand{font-weight:700;color:var(--text);text-decoration:none;font-size:1.125rem}
+.primary-nav{margin-left:auto;display:flex;gap:0.75rem}
+.primary-nav a{color:var(--text);text-decoration:none;padding:0.5rem;border-radius:6px}
+.primary-nav a:hover{background:rgba(255,255,255,0.02)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem;color:var(--text)}
+.hero{padding:2.5rem 0}
+.lead{color:var(--muted);max-width:60ch}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--accent),#5bb6ff);color:#001827;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+.card{padding:1rem;border-radius:12px;border:1px solid var(--border);background:var(--card);box-shadow:0 6px 18px rgba(2,6,23,0.45);}
+.card h3{color:var(--text)}
+.card-img{width:64px;height:64px;border-radius:8px;background:linear-gradient(180deg,#e6eef822, #c7d2fe22);display:block;margin-bottom:0.5rem}
+.site-footer{border-top:1px solid var(--border);padding:1rem 0;margin-top:2rem;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:720px){
+  .primary-nav{position:absolute;right:1rem;top:64px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));flex-direction:column;padding:0.5rem;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.6);display:none}
+  .primary-nav.show{display:flex}
+  .nav-toggle{display:inline-flex;margin-left:auto}
+  .site-header .container{position:relative}
+}
+
+code{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px}
+
+/* Repository-like layout */
+.repo-layout{padding-top:1rem}
+.repo-header{padding:1rem 0 0.5rem}
+.repo-title{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}
+.owner{color:var(--muted);text-decoration:none}
+.slash{color:var(--muted)}
+.repo-name{font-size:1.15rem}
+.repo-badge{background:rgba(255,255,255,0.03);color:var(--muted);padding:0.15rem 0.5rem;border-radius:6px;font-size:0.8rem;margin-left:0.5rem}
+.repo-desc{color:var(--muted);margin:0.25rem 0 0.75rem}
+
+.repo-tabs{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+.tabs{display:flex;gap:0.5rem;padding:0.5rem 0}
+.tab{color:var(--muted);text-decoration:none;padding:0.5rem 0.75rem;border-radius:6px}
+.tab.active{color:var(--text);background:rgba(255,255,255,0.02);font-weight:600}
+
+.repo-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem;margin-top:1rem}
+.repo-main{min-width:0}
+.repo-side{min-width:0}
+
+.file-list .file-list-header{font-weight:600;padding-bottom:0.5rem}
+.files{width:100%;border-collapse:collapse}
+.files td{padding:0.5rem 0;border-top:1px solid rgba(255,255,255,0.02)}
+.file{font-family:ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace}
+.file-meta{color:var(--muted);text-align:right;width:1px;white-space:nowrap;padding-left:1rem}
+
+.readme h2{margin-top:0}
+.readme pre{background:rgba(255,255,255,0.02);padding:0.75rem;border-radius:8px;overflow:auto}
+.lang-list{list-style:none;padding:0;margin:0}
+.lang-list li{display:flex;justify-content:space-between;padding:0.25rem 0;color:var(--muted)}
+
+@media (max-width:960px){
+  .repo-grid{grid-template-columns:1fr}
+}
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — Sagekosi</title>
+    <meta name="description" content="Contact Sagekosi" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">Sagekosi</a>
+        <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Contact</h1>
+      <p class="lead">I'd love to hear from you. You can reach me by email:</p>
+      <p><a href="mailto:you@example.com">you@example.com</a></p>
+
+      <h2>Quick message</h2>
+      <form action="mailto:you@example.com" method="post" enctype="text/plain">
+        <label for="name">Name</label><br>
+        <input id="name" name="name" style="width:100%;padding:0.5rem;margin-bottom:0.5rem" />
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="6" style="width:100%;padding:0.5rem;margin-bottom:0.5rem"></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Sagekosi.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
